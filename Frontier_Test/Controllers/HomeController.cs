@@ -38,7 +38,8 @@ namespace Frontier_Test.Controllers
                     }
                 }
             }
-
+            //TODO: Break a lot of this out into methods
+            //TODO: Move HTML out of code
             var accounts = GetAccounts(content);
             ViewData["Message"] = "Your contact page.";
 
@@ -128,7 +129,7 @@ namespace Frontier_Test.Controllers
         {
             List<Account> accounts = new List<Account>();
 
-
+            //TODO: Break this out directly into an object
             var accountArray = JToken.Parse(json);
             for(var x = 0; x < accountArray.Count(); x++)
             {
